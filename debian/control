@@ -1,0 +1,13 @@
+Source: teapot
+Section: utils
+Priority: optional
+Maintainer: qishaohui  <1371634847@qq.com>
+Build-Depends: debhelper (>= 9),pkg-config, dpkg-dev, qt5-qmake, qtbase5-dev,qttools5-dev-tools
+Standards-Version: 0.1-1
+Homepage: teapot
+
+Package: teapot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: libqt5libqgtk2, kimageformat-plugins
+Description: just a teapot

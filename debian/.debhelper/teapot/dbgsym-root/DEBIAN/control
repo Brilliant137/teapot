@@ -1,0 +1,13 @@
+Package: teapot-dbgsym
+Package-Type: ddeb
+Source: teapot
+Version: 0.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: qishaohui  <1371634847@qq.com>
+Installed-Size: 405
+Depends: teapot (= 0.1-1)
+Section: debug
+Priority: optional
+Description: debug symbols for teapot
+Build-Ids: 5685891fa0877bce7e0f1be008e61f65d4a0d1a6
