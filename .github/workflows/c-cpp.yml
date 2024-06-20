@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Build and Package
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
       run: sudo apt install cppcheck --fix-missing
     - name: cppcheck
       run: cppcheck .
-    - name: Build and packege
+    - name: Build and package
       run: dpkg-buildpackage -b -us -uc
