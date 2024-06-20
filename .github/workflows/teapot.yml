@@ -9,9 +9,13 @@ jobs:
     steps:
     - name: read repo
       uses: actions/checkout@v2
+      
     - name: installCppcheck
       run: sudo apt install cppcheck --fix-missing
+    - name: 安装打包依赖
+      run: sudo apt-get install debhelper qt5-qmake qtbase5-dev qttools5-dev-tools
     - name: cppcheck
       run: cppcheck .
+      
     - name: Build and package
       run: dpkg-buildpackage -b -us -uc
