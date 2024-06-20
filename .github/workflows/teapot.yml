@@ -1,17 +1,13 @@
 name: Build and Package
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+on: push
 jobs:
   build:
-
+    name: environment
     runs-on: ubuntu-latest
 
     steps:
+    - name: read repo
     - uses: actions/checkout@v2
     - name: installCppcheck
       run: sudo apt install cppcheck --fix-missing
