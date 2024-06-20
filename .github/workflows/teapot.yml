@@ -22,6 +22,7 @@ jobs:
       run: make
     - name: Build and package
       run: dpkg-buildpackage -b -us -uc
+    - name: 移动包到当前目录
       run: mv ../*.deb .
       
     - name: Upload Deb Package
