@@ -22,9 +22,10 @@ jobs:
       run: make
     - name: Build and package
       run: dpkg-buildpackage -b -us -uc
+      run: mv ../*.deb .
       
     - name: Upload Deb Package
       uses: actions/upload-artifact@v2
       with:
         name: teapot-deb-package
-        path: ../*.deb
+        path: ./*.deb
