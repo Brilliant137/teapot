@@ -13,7 +13,7 @@ jobs:
     - name: installCppcheck
       run: sudo apt install cppcheck --fix-missing
     - name: 安装打包依赖
-      run: sudo apt-get install debhelper qt5-qmake qtbase5-dev qttools5-dev-tools build-essential
+      run: sudo apt-get install debhelper qt5-qmake qtbase5-dev qttools5-dev-tools build-essential freeglut3-dev
     - name: cppcheck
       run: cppcheck .
     - name: qmake
@@ -22,3 +22,9 @@ jobs:
       run: make
     - name: Build and package
       run: dpkg-buildpackage -b -us -uc
+      
+    - name: Upload Deb Package
+      uses: actions/upload-artifact@v2
+      with:
+        name: teapot-deb-package
+        path: ../*.deb
