@@ -28,5 +28,5 @@ jobs:
     - name: Upload Deb Package
       uses: actions/upload-artifact@v2
       with:
-        name: teapot-deb-package
+        name: teapot-0.1-1
         path: ./*.deb
