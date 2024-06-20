@@ -1,0 +1,22 @@
+# Ignore object files
+*.o
+
+# Ignore binary files
+*.exe
+*.dll
+*.so
+
+# Ignore Qt specific files
+*.pro.user
+*.qmake.stash
+*.moc
+
+# Ignore build directories
+build/
+debug/
+release/
+
+# Ignore user-specific files
+*.log
+*.tmp
+*.swp
