@@ -16,6 +16,9 @@ jobs:
       run: sudo apt-get install debhelper qt5-qmake qtbase5-dev qttools5-dev-tools build-essential
     - name: cppcheck
       run: cppcheck .
-      
+    - name: qmake
+      run: qmake
+    - name: make
+      run: make
     - name: Build and package
       run: dpkg-buildpackage -b -us -uc
